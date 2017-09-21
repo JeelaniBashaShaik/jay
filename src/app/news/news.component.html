@@ -1,0 +1,110 @@
+
+
+<md-tab-group>
+  <md-tab label="Times Of India">
+<md-card *ngFor="let news of toiNews" class="news-card">
+  <md-card-header>
+    <md-card-title style="color:lightcoral">{{news.title}}</md-card-title>
+    <md-card-subtitle></md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src={{news.urlToImage}}  >
+  <md-card-content>
+    <p>
+     {{news.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+  <a href={{news.url}} md-raised-button color="primary" >Visit</a>&nbsp;&nbsp;&nbsp;&nbsp; <a>{{news.publishedAt}}</a>
+  </md-card-actions>
+</md-card>
+  </md-tab>
+  <md-tab label="The Hindu">
+<md-card *ngFor="let news of hinduNews" class="news-card">
+  <md-card-header>
+    <md-card-title style="color:lightcoral">{{news.title}}</md-card-title>
+    <md-card-subtitle></md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src={{news.urlToImage}}  >
+  <md-card-content>
+    <p>
+     {{news.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+  <a href={{news.url}} md-raised-button color="primary" >Visit</a>&nbsp;&nbsp;&nbsp;&nbsp; <a>{{news.publishedAt}}</a>
+  </md-card-actions>
+</md-card>
+
+  </md-tab>
+<md-tab label="Tech Radar">
+
+  <md-card *ngFor="let news of techRadar" class="news-card">
+  <md-card-header>
+    <md-card-title style="color:lightcoral">{{news.title}}</md-card-title>
+    <md-card-subtitle></md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src={{news.urlToImage}}  >
+  <md-card-content>
+    <p>
+     {{news.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+  <a href={{news.url}} md-raised-button color="primary" >Visit</a>&nbsp;&nbsp;&nbsp;&nbsp; <a>{{news.publishedAt}}</a>
+  </md-card-actions>
+</md-card>
+</md-tab>
+<md-tab label="Sport Bible">
+
+  <md-card *ngFor="let news of sportBible" class="news-card">
+  <md-card-header>
+    <md-card-title style="color:lightcoral">{{news.title}}</md-card-title>
+    <md-card-subtitle></md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src={{news.urlToImage}}  >
+  <md-card-content>
+    <p>
+     {{news.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+  <a href={{news.url}} md-raised-button color="primary" >Visit</a>&nbsp;&nbsp;&nbsp;&nbsp; <a>{{news.publishedAt}}</a>
+  </md-card-actions>
+</md-card>
+</md-tab>
+
+<md-tab label="The Verge">
+  <md-card *ngFor="let news of theVerge" class="news-card">
+  <md-card-header>
+    <md-card-title style="color:lightcoral">{{news.title}}</md-card-title>
+    <md-card-subtitle></md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src={{news.urlToImage}}  >
+  <md-card-content>
+    <p>
+     {{news.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+  <a href={{news.url}} md-raised-button color="primary" >Visit</a>&nbsp;&nbsp;&nbsp;&nbsp; <a>{{news.publishedAt}}</a>
+  </md-card-actions>
+</md-card>
+</md-tab>
+<md-tab label="New Scientist">
+  <md-card *ngFor="let news of theNextWeb" class="news-card">
+  <md-card-header>
+    <md-card-title style="color:lightcoral">{{news.title}}</md-card-title>
+    <md-card-subtitle></md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src={{news.urlToImage}}  >
+  <md-card-content>
+    <p>
+     {{news.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+  <a href={{news.url}} md-raised-button color="primary" >Visit</a>&nbsp;&nbsp;&nbsp;&nbsp; <a>{{news.publishedAt}}</a>
+  </md-card-actions>
+</md-card>
+</md-tab>
+</md-tab-group>

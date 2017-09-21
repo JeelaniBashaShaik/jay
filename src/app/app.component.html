@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+ 
+ <md-card id="timeCard">
+  
+ 
+ <md-card-content>
+    <a style="font-size:300%"> {{myDate | date: 'mediumTime'}}   </a> <a>{{myDate | date: 'fullDate'}}</a>
+  </md-card-content>
+
+</md-card>
+<div id="myCards" style="margin-top: 1%;
+    margin-bottom: 3%;">
+   <div class="owl-carousel owl-theme">
+  <div class="carouselCard"> <md-card style="background-color:lavender"> <md-card-content>hello1</md-card-content></md-card> </div>
+  <div class="carouselCard"> <md-card style="background-color:lavender"> <md-card-content>hello2</md-card-content></md-card> </div>
+  <div class="carouselCard"> <md-card style="background-color:lavender"> <md-card-content>hello3</md-card-content></md-card> </div>
+ <div class="carouselCard"> <md-card style="background-color:lavender"> <md-card-content>hello4</md-card-content></md-card> </div>
+  <div class="carouselCard"> <md-card style="background-color:lavender"> <md-card-content>hello5</md-card-content></md-card> </div>
+ <div class="carouselCard"> <md-card style="background-color:lavender"> <md-card-content>hello6</md-card-content></md-card> </div>
+  <div class="carouselCard"> <md-card style="background-color:lavender"> <md-card-content>hello7</md-card-content></md-card> </div>
+</div></div>
+<!-- <md-toolbar>
+  <span><a style="font-size:300%"> {{myDate | date: 'mediumTime'}}   </a> <a>{{myDate | date: 'fullDate'}}</a></span>
+
+
+</md-toolbar> -->
+
+
+<md-tab-group style="overflow-y:scroll;height:600px">
+  <md-tab label="News"><app-news></app-news></md-tab>
+  <md-tab label="Weather"><app-weather></app-weather></md-tab>
+  <md-tab label="Translate"><app-translate></app-translate></md-tab>
+</md-tab-group>

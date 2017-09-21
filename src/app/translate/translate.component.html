@@ -1,0 +1,23 @@
+<p>
+  translate works!
+</p>
+<md-card >
+   <md-card-title style="color:limegreen">
+
+  </md-card-title> 
+  <md-card-content>
+ <md-select placeholder="Target Lang.," (change)="selectLanguage($event)" name="language" >
+    <md-option *ngFor="let lang of languages" [value]="lang.code">
+      {{lang.value}}
+    </md-option>
+  </md-select>
+
+   <md-form-field class="example-full-width">
+    <input mdInput placeholder="Query..."  [(ngModel)]="queryWord">
+  </md-form-field>
+
+  <button md-raised-button color="primary" (click)="translate()">Translate</button>
+
+  {{queryResult}}
+  </md-card-content>
+</md-card>

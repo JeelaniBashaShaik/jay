@@ -1,0 +1,63 @@
+<p>
+  Today's Weather
+</p>
+<!-- <img src="http://openweathermap.org/img/w/01n.png"> -->
+
+<!-- <div *ngIf="dataAvailable"><p>Temperature: &nbsp;{{weatherData.list[0].main.temp}}</p>
+<p>Humidity: &nbsp;{{weatherData.list[0].main.humidity}} %</p> </div> -->
+
+
+
+
+<md-card id="weatherCard"  *ngIf="city1dataAvailable"  >
+   <md-card-title style="color:limegreen;text-align:left">{{city1weatherDataNow.name}} <a><img src={{city1weatherIconUrl}} height="62" width="62" style="    margin-left: 2%;
+    margin-top: -17%;
+    margin-bottom: -11%;"></a></md-card-title> 
+  <md-card-content>
+   <div style="text-align:left">
+    <p class="weatherText">Temperature:&nbsp;{{city1weatherDataNow.main.temp}}°C </p>
+    <p class="weatherText">Min:&nbsp;{{city1weatherDataNow.main.temp_min}}°C &nbsp;&nbsp;&nbsp; Max:&nbsp;{{city1weatherDataNow.main.temp_max}}°C</p>
+    <span><p class="weatherText">Condition:&nbsp;{{city1weatherDataNow.weather[0].main}}</p></span>
+    <p class="weatherText"><img src="/assets/sunrise.png" style="margin-bottom:-2%" height="32" width="32">&nbsp;{{city1sunrise}}      <img src="/assets/sunset.png" style="margin-bottom:-2%" height="32" width="32">&nbsp;{{city1sunset}}</p>
+   </div>
+  </md-card-content>
+</md-card>
+  
+<md-card id="weatherCard"  *ngIf="city2dataAvailable"  >
+   <md-card-title style="color:limegreen;text-align:left">{{city2weatherDataNow.name}} <a><img src={{city2weatherIconUrl}} height="62" width="62" style="    margin-left: 2%;
+    margin-top: -17%;
+    margin-bottom: -11%;"></a></md-card-title> 
+  <md-card-content>
+   <div style="text-align:left">
+    <p class="weatherText">Temperature:&nbsp;{{city2weatherDataNow.main.temp}}°C </p>
+    <p class="weatherText">Min:&nbsp;{{city2weatherDataNow.main.temp_min}}°C &nbsp;&nbsp;&nbsp; Max:&nbsp;{{city2weatherDataNow.main.temp_max}}°C</p>
+    <span><p class="weatherText">Condition:&nbsp;{{city2weatherDataNow.weather[0].main}}</p></span>
+    <p class="weatherText"><img src="/assets/sunrise.png" style="margin-bottom:-2%" height="32" width="32">&nbsp;{{city2sunrise}}      <img src="/assets/sunset.png" style="margin-bottom:-2%" height="32" width="32">&nbsp;{{city2sunset}}</p>
+   </div>
+  </md-card-content>
+</md-card>
+
+
+<md-card  style="width:10%;margin-top:1%" *ngFor="let weather of weatherForecast">
+   <md-card-title style="color:limegreen">
+  </md-card-title> 
+  <md-card-content>
+    <p class="weatherText" style="color:limegreen;text-align:left;margin-top:-18%"> {{weather.dt_txt}}</p>
+   <p class="weatherText" style="text-align:left"> {{weather.main.temp}}°C</p><a><img style="    margin-top: -16%;
+    margin-left: 15%;" src="http://openweathermap.org/img/w/{{weatherForecast[0].weather[0].icon}}.png"></a>
+   <p class="weatherText" style="    text-align: left;
+    margin-top: -11%;color:lightcoral;
+    margin-bottom: -14%;"> {{weather.weather[0].main}}</p>
+  </md-card-content>
+</md-card>
+
+<!-- <md-grid-list cols="3" rowHeight="3:1" style="width:50%">
+  <md-grid-tile>
+    
+  </md-grid-tile>
+  <md-grid-tile style="margin-left:-13%">
+    
+  </md-grid-tile>
+ <md-grid-tile>
+    </md-grid-tile>
+</md-grid-list> -->
