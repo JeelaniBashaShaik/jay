@@ -1,0 +1,43 @@
+<md-card class="news-card">
+  <md-card-header>
+    <md-card-title style="color:lightcoral;font-size:150%">Title</md-card-title>
+    <md-card-subtitle></md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+   <p *ngFor="let item of list" ><md-checkbox (change)="call($event)" id={{item.value}}  color="warn"><span >{{item.value}}</span></md-checkbox></p>
+  <p><md-checkbox color="warn"><span id='as'>qwert</span></md-checkbox></p>
+  
+  </md-card-content>
+   <md-card-actions style="border-top:1px solid black">
+      <div class="button-row" style="text-align:center">
+        
+ <button md-icon-button>
+    <md-icon class="md-24" aria-label="Example icon-button with a heart icon">share</md-icon>
+  </button>
+  <button md-icon-button>
+    <md-icon class="md-24" aria-label="Example icon-button with a heart icon">delete</md-icon>
+  </button></div>
+
+  </md-card-actions>
+ 
+</md-card>
+
+
+call(e){
+    console.log(e.source.id);
+    for(var i=0;i<this.list.length;i++){
+    if(e.source.id === this.list[i].value){
+      if(e.checked === true){
+        this.list[i].done = true;
+        var x = <HTMLInputElement>document.getElementById(e.source.id);
+      x.style.textDecoration='line-through';
+    }else{
+      this.list[i].done = false;
+       var x = <HTMLInputElement>document.getElementById(e.source.id);
+      x.style.textDecoration='none';
+    }
+  }
+}
+    console.log(this.list);
+    
+  }
